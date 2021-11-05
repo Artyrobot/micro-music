@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 999; index++) {
         music.playTone(880, music.beat(BeatFraction.Breve))
         music.playTone(784, music.beat(BeatFraction.Breve))
         music.playTone(698, music.beat(BeatFraction.Breve))
@@ -9,6 +9,11 @@ input.onButtonPressed(Button.A, function () {
         music.playTone(698, music.beat(BeatFraction.Breve))
         music.playTone(784, music.beat(BeatFraction.Breve))
     }
+})
+input.onButtonPressed(Button.AB, function () {
+    music.setVolume(0)
+    basic.pause(30000)
+    music.setVolume(200)
 })
 input.onButtonPressed(Button.B, function () {
     for (let index = 0; index < 2; index++) {
