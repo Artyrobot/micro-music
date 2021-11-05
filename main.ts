@@ -1,16 +1,44 @@
 input.onButtonPressed(Button.A, function () {
-	
-})
-input.onButtonPressed(Button.AB, function () {
-	
+    for (let index = 0; index < 2; index++) {
+        music.playTone(880, music.beat(BeatFraction.Breve))
+        music.playTone(784, music.beat(BeatFraction.Breve))
+        music.playTone(698, music.beat(BeatFraction.Breve))
+        music.playTone(659, music.beat(BeatFraction.Breve))
+        music.playTone(622, music.beat(BeatFraction.Breve))
+        music.playTone(659, music.beat(BeatFraction.Breve))
+        music.playTone(698, music.beat(BeatFraction.Breve))
+        music.playTone(784, music.beat(BeatFraction.Breve))
+    }
 })
 input.onButtonPressed(Button.B, function () {
-    music.playTone(880, music.beat(BeatFraction.Breve))
-    music.playTone(784, music.beat(BeatFraction.Breve))
-    music.playTone(698, music.beat(BeatFraction.Breve))
-    music.playTone(659, music.beat(BeatFraction.Breve))
-    music.playTone(622, music.beat(BeatFraction.Breve))
+    for (let index = 0; index < 2; index++) {
+        music.playTone(784, music.beat(BeatFraction.Breve))
+        music.playTone(698, music.beat(BeatFraction.Breve))
+        music.playTone(659, music.beat(BeatFraction.Breve))
+        music.playTone(622, music.beat(BeatFraction.Breve))
+        music.playTone(659, music.beat(BeatFraction.Breve))
+        music.playTone(698, music.beat(BeatFraction.Breve))
+        music.playTone(784, music.beat(BeatFraction.Breve))
+        music.playTone(880, music.beat(BeatFraction.Breve))
+    }
 })
 input.onGesture(Gesture.Shake, function () {
-    music.playTone(131, music.beat(BeatFraction.Breve))
+    for (let index = 0; index < 2; index++) {
+        basic.showString("High a 4 beat")
+        basic.pause(1000)
+        basic.showString("High g 4 beat")
+        basic.pause(1000)
+        basic.showString("High f 4 beat")
+        basic.pause(1000)
+        basic.showString("High e 4 beat")
+        basic.pause(1000)
+        basic.showString("High d# 4 beat")
+        basic.pause(1000)
+        basic.showString("High e 4 beat")
+        basic.pause(1000)
+        basic.showString("High f 4 beat")
+        basic.pause(1000)
+        basic.showString("High g 4 beat")
+        basic.pause(1000)
+    }
 })
