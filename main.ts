@@ -16,7 +16,7 @@ input.onButtonPressed(Button.AB, function () {
     music.setVolume(200)
 })
 input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 999; index++) {
         music.playTone(784, music.beat(BeatFraction.Breve))
         music.playTone(698, music.beat(BeatFraction.Breve))
         music.playTone(659, music.beat(BeatFraction.Breve))
