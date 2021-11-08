@@ -35,7 +35,7 @@ input.onButtonPressed(Button.B, function () {
     }
 })
 input.onGesture(Gesture.Shake, function () {
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 999; index++) {
         basic.showString("High a 4 beat")
         basic.pause(1000)
         basic.showString("High g 4 beat")
@@ -51,6 +51,8 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("High f 4 beat")
         basic.pause(1000)
         basic.showString("High g 4 beat")
+        basic.pause(1000)
+        basic.showString("reapeat forever")
         basic.pause(1000)
     }
 })
