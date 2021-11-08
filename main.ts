@@ -11,9 +11,16 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    music.setVolume(0)
-    basic.pause(30000)
-    music.setVolume(200)
+    for (let index = 0; index < 999; index++) {
+        music.playTone(880, music.beat(BeatFraction.Double))
+        music.playTone(784, music.beat(BeatFraction.Double))
+        music.playTone(698, music.beat(BeatFraction.Double))
+        music.playTone(659, music.beat(BeatFraction.Double))
+        music.playTone(622, music.beat(BeatFraction.Double))
+        music.playTone(659, music.beat(BeatFraction.Double))
+        music.playTone(698, music.beat(BeatFraction.Double))
+        music.playTone(784, music.beat(BeatFraction.Double))
+    }
 })
 input.onButtonPressed(Button.B, function () {
     for (let index = 0; index < 999; index++) {
@@ -46,4 +53,10 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("High g 4 beat")
         basic.pause(1000)
     }
+})
+input.onGesture(Gesture.TiltRight, function () {
+    led.stopAnimation()
+    music.setVolume(0)
+    basic.pause(30000)
+    music.setVolume(200)
 })
