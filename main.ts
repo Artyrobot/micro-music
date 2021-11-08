@@ -62,6 +62,7 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.pause(30000)
     music.setVolume(200)
 })
+basic.pause(2000)
 basic.showString("IT'S")
 basic.pause(100)
 basic.showString("MUSIC")
