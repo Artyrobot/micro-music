@@ -54,7 +54,7 @@ input.onGesture(Gesture.Shake, function () {
         basic.pause(1000)
     }
 })
-input.onGesture(Gesture.TiltRight, function () {
+input.onLogoEvent(TouchButtonEvent.Touched, function () {
     led.stopAnimation()
     music.setVolume(0)
     basic.pause(30000)
