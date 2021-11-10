@@ -1,13 +1,15 @@
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 999; index++) {
-        music.playTone(880, music.beat(BeatFraction.Breve))
-        music.playTone(784, music.beat(BeatFraction.Breve))
-        music.playTone(698, music.beat(BeatFraction.Breve))
-        music.playTone(659, music.beat(BeatFraction.Breve))
-        music.playTone(622, music.beat(BeatFraction.Breve))
-        music.playTone(659, music.beat(BeatFraction.Breve))
-        music.playTone(698, music.beat(BeatFraction.Breve))
-        music.playTone(784, music.beat(BeatFraction.Breve))
+        for (let index = 0; index < 999; index++) {
+            music.playTone(880, music.beat(BeatFraction.Breve))
+            music.playTone(784, music.beat(BeatFraction.Breve))
+            music.playTone(698, music.beat(BeatFraction.Breve))
+            music.playTone(659, music.beat(BeatFraction.Breve))
+            music.playTone(622, music.beat(BeatFraction.Breve))
+            music.playTone(659, music.beat(BeatFraction.Breve))
+            music.playTone(698, music.beat(BeatFraction.Breve))
+            music.playTone(784, music.beat(BeatFraction.Breve))
+        }
     }
 })
 input.onButtonPressed(Button.AB, function () {
@@ -62,7 +64,10 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.pause(30000)
     music.setVolume(200)
 })
-basic.pause(2000)
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    music.setVolume(0)
+})
+basic.pause(1000)
 basic.showString("IT'S")
 basic.pause(100)
 basic.showString("MUSIC")
