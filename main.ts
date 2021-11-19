@@ -1,3 +1,9 @@
+input.onPinPressed(TouchPin.P0, function () {
+    for (let index = 0; index < 999; index++) {
+        music.playMelody("C D E F G A B C5 ", 120)
+        music.playMelody("C5 B A G F E D C ", 120)
+    }
+})
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 999; index++) {
         for (let index = 0; index < 999; index++) {
@@ -36,6 +42,12 @@ input.onButtonPressed(Button.B, function () {
         music.playTone(880, music.beat(BeatFraction.Breve))
     }
 })
+input.onPinPressed(TouchPin.P1, function () {
+    led.stopAnimation()
+    music.setVolume(0)
+    basic.pause(30000)
+    music.setVolume(200)
+})
 input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 999; index++) {
         basic.showString("High a 4 beat")
@@ -59,12 +71,6 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 input.onLogoEvent(TouchButtonEvent.Touched, function () {
-    led.stopAnimation()
-    music.setVolume(0)
-    basic.pause(30000)
-    music.setVolume(200)
-})
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     music.setVolume(0)
 })
 basic.pause(1000)
