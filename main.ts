@@ -46,7 +46,7 @@ input.onPinPressed(TouchPin.P1, function () {
     led.stopAnimation()
     music.setVolume(0)
     basic.pause(30000)
-    music.setVolume(200)
+    music.setVolume(127)
 })
 input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 999; index++) {
