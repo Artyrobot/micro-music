@@ -1,7 +1,8 @@
 input.onPinPressed(TouchPin.P0, function () {
     for (let index = 0; index < 999; index++) {
-        music.playMelody("C D E F G A B C5 ", 120)
-        music.playMelody("C5 B A G F E D C ", 120)
+        music.playTone(220, music.beat(BeatFraction.Breve))
+        music.playTone(220, music.beat(BeatFraction.Double))
+        music.playMelody("C D E F G A B C5 ", 200)
     }
 })
 input.onButtonPressed(Button.A, function () {
@@ -16,6 +17,11 @@ input.onButtonPressed(Button.A, function () {
             music.playTone(698, music.beat(BeatFraction.Breve))
             music.playTone(784, music.beat(BeatFraction.Breve))
         }
+    }
+})
+input.onPinPressed(TouchPin.P2, function () {
+    for (let index = 0; index < 4; index++) {
+        music.playMelody("- - - - - - C5 C5 ", 199998)
     }
 })
 input.onButtonPressed(Button.AB, function () {
@@ -46,7 +52,7 @@ input.onPinPressed(TouchPin.P1, function () {
     led.stopAnimation()
     music.setVolume(0)
     basic.pause(30000)
-    music.setVolume(127)
+    music.setVolume(128)
 })
 input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 999; index++) {
